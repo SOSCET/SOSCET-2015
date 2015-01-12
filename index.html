@@ -18,13 +18,10 @@
         .nav-pills>li>a {
             border-radius: 0;
         }
-        .nav-pills .active{
-            background: rgba(10, 200, 100, 0.5);
-        }
         .nav-pills>li.active>a, 
         .nav-pills>li.active>a:hover, 
         .nav-pills>li.active>a:focus {
-            background: rgba(10, 200, 100, 0.5);
+            //background: rgba(10, 200, 100, 0.5);
         }
         .welcome {
             position: absolute;
@@ -50,47 +47,88 @@
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
+
+        $('body').scrollspy({ target: '#scrollspy' })
         $(window).scroll(function() {
             //滾超過header就把Menu置上
             //Variable headerHeight get xxxxpixel
-            var headerHeight = /^[0-9]+(\.[0-9]+)?/.exec($('#header').css('padding-top'))[0];
+            var headerHeight = parseInt($('#header').css('padding-top'));
             var scrollTopHeight = $(window).scrollTop();
             if(scrollTopHeight > headerHeight) {
-                console.log(123);
+                $('#nav').addClass('navbar-fixed-top');
+            } else {
+                $('#nav').removeClass('navbar-fixed-top');
             }
         });
     });
     </script>
     <title>SOSCET First</title>
 </head>
-<body>
+<body data-spy="scroll" data-offset="0" data-target="#scrollspy">
     <header id="header">
         <div class="welcome">
             <div class="inner">
                 <h1>SOSCET</h1>
                 <h3>東部開源人學生社群</h3>
-                <small>Students' Open Source Community in Eastern Taiwan</small>
+                <small>Students' Open Source Community of Eastern Taiwan</small>
             </div>
         </div>
     </header>
-    <ul class="nav nav-pills nav-justified">
-        <li class="presentation  active">
-            <a href="#">test</a>
-        </li>
-        <li class="presentation">
-            <a href="#">test</a>
-        </li>
-        <li class="presentation">
-            <a href="#">test</a>
-        </li>
-        <li class="presentation">
-            <a href="#">test</a>
-        </li>
-    </ul>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="source">
-                <h1>起源</h1>
+    <div id="scrollspy">
+        <ul id="nav" class="nav nav-pills nav-justified">
+            <li class="presentation">
+                <a href="#about">About</a>
+            </li>
+            <li class="presentation">
+                <a href="#location">Location</a>
+            </li>
+            <li class="presentation">
+                <a href="#schedule">Schedule</a>
+            </li>
+            <li class="presentation">
+                <a href="#contactus">ContactUs</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" id="wrapper">
+        <div class="row" id="about">
+            <div class="col-md-12">
+                <h1>關於我們</h1>
+                <div>
+                    <p>
+                    關於我們...我想說的是
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="location">
+            <div class="col-md-12">
+                <h1>地圖</h1>
+                <div>
+                    <p>
+                    聽說是地圖
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="schedule">
+            <div class="col-md-12">
+                <h1>議程</h1>
+                <div>
+                    <p>
+                    這裡是議程
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="contactus">
+            <div class="col-md-12">
+                <h1>聯絡我們</h1>
+                <div>
+                    <p>
+                    要聯絡我們嗎>_>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

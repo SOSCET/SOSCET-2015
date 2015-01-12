@@ -7,10 +7,13 @@
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <style type="text/css">
+        body {
+            min-height: 5000px;
+        }
         #header {
             display: block;
             padding-top: 66.7%;
-            background: url('./static/img/bkg.jpg') no-repeat fixed 100%;
+            background: url('./bkg.jpg') no-repeat fixed 100%;
         }
         .nav-pills>li>a {
             border-radius: 0;
@@ -46,6 +49,17 @@
         }
     </style>
     <script type="text/javascript">
+    $(document).ready(function(){
+        $(window).scroll(function() {
+            //滾超過header就把Menu置上
+            //Variable headerHeight get xxxxpixel
+            var headerHeight = /^[0-9]+(\.[0-9]+)?/.exec($('#header').css('padding-top'))[0];
+            var scrollTopHeight = $(window).scrollTop();
+            if(scrollTopHeight > headerHeight) {
+                console.log(123);
+            }
+        });
+    });
     </script>
     <title>SOSCET First</title>
 </head>
@@ -75,8 +89,8 @@
     </ul>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1></h1>
+            <div class="col-md-12" id="source">
+                <h1>起源</h1>
             </div>
         </div>
     </div>

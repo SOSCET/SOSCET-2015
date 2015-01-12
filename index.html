@@ -44,14 +44,16 @@
         @media screen and (max-width: 768px) {
             
         }
+        #nav {
+            background: rgba(240, 240, 240, 1);
+        }
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
-
-        $('body').scrollspy({ target: '#scrollspy' })
+        //按About之後navbar會閃爍...
+        $('#wrapper').scrollspy({ target: '#nav' })
         $(window).scroll(function() {
             //滾超過header就把Menu置上
-            //Variable headerHeight get xxxxpixel
             var headerHeight = parseInt($('#header').css('padding-top'));
             var scrollTopHeight = $(window).scrollTop();
             if(scrollTopHeight > headerHeight) {
@@ -64,7 +66,7 @@
     </script>
     <title>SOSCET First</title>
 </head>
-<body data-spy="scroll" data-offset="0" data-target="#scrollspy">
+<body>
     <header id="header">
         <div class="welcome">
             <div class="inner">
@@ -74,8 +76,8 @@
             </div>
         </div>
     </header>
-    <div id="scrollspy">
-        <ul id="nav" class="nav nav-pills nav-justified">
+    <div id="nav">
+        <ul class="nav nav-pills nav-justified">
             <li class="presentation">
                 <a href="#about">About</a>
             </li>
@@ -90,7 +92,7 @@
             </li>
         </ul>
     </div>
-    <div class="container" id="wrapper">
+    <div class="container" id="wrapper" data-spy="scroll" data-offset="0" data-target="#nav">
         <div class="row" id="about">
             <div class="col-md-12">
                 <h1>關於我們</h1>

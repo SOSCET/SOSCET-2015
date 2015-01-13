@@ -58,8 +58,10 @@
             var scrollTopHeight = $(window).scrollTop();
             if(scrollTopHeight > headerHeight) {
                 $('#nav').addClass('navbar-fixed-top');
+                $('#wrapper').css({"margin-top":$('#nav').height()});
             } else {
                 $('#nav').removeClass('navbar-fixed-top');
+                $('#wrapper').css({"margin-top":"0px"});
             }
         });
     });

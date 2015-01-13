@@ -51,16 +51,16 @@
     </style>
     <script type="text/javascript">
     //取得瀏覽器視窗高度
-    function getBrowserHeight(){
+    function getBrowserHeight() {
       return window.innerHeight;
     }
 
     $(document).ready(function(){
       var navHeight = $('#nav').height();
-      var headerHeight = $('#header').height() - navHeight;
 
       //滾動事件
       $(window).scroll(function() {
+        var headerHeight = $('#header').height() - navHeight;
         var scrollTopHeight = $(window).scrollTop();
         
         if(scrollTopHeight > headerHeight) {

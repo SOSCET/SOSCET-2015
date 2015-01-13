@@ -10,7 +10,7 @@
         body {
             min-height: 5000px;
         }
-        header {
+        #header {
             position: relative;
             background: url('./bkg.jpg') no-repeat fixed center center / cover;
             height: 100vh;
@@ -35,6 +35,16 @@
             text-align: center;
             height: 17em;
         }
+        #header .bgcopy {
+            position: absolute;
+            right: 2em;
+            bottom: 1em;
+            color: #666;
+        }
+        #header .bgcopy a {
+            color: #666;
+        }
+
         .welcome:hover {
             
         }
@@ -91,6 +101,10 @@
                 <h3>東部開源人學生社群</h3>
                 <small>Students' Open Source Community of Eastern Taiwan</small>
             </div>
+        </div>
+        <div class="bgcopy">
+            <p>Background by <a href="https://www.flickr.com/photos/tomasfano/">Tom&aacute;s Fano</a>,
+               <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></p>
         </div>
     </header>
     <div id="nav">

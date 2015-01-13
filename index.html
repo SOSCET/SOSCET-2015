@@ -12,8 +12,8 @@
         }
         #header {
             display: block;
-            padding-top: 66.7%;
-            background: url('./bkg.jpg') no-repeat fixed 100%;
+            background: url('./bkg.jpg') no-repeat fixed;
+            background-size: cover;
         }
         .nav-pills>li>a {
             border-radius: 0;
@@ -25,11 +25,10 @@
         }
         .welcome {
             position: absolute;
-            top: 10%;
             left: 0;
             right: 0;
             padding: 3em;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.5);
             color: #eee;
             text-align: center;
 
@@ -50,20 +49,43 @@
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
-        //按About之後navbar會閃爍...
-        $('#wrapper').scrollspy({ target: '#nav' })
-        $(window).scroll(function() {
-            //滾超過header就把Menu置上
-            var headerHeight = parseInt($('#header').css('padding-top'));
-            var scrollTopHeight = $(window).scrollTop();
-            if(scrollTopHeight > headerHeight) {
-                $('#nav').addClass('navbar-fixed-top');
-                $('#wrapper').css({"margin-top":$('#nav').height()});
-            } else {
-                $('#nav').removeClass('navbar-fixed-top');
-                $('#wrapper').css({"margin-top":"0px"});
-            }
-        });
+      var navHeight = $('#nav').height();
+      //取得瀏覽器視窗高度
+      function getBrowserHeight(){
+        return self.innerHeight;
+      }
+      //設定標題飾條位置，保持在正中間。
+      function setinnermiddle(){
+        $('#header').height(getBrowserHeight()).children('.welcome').css({"top":($('#header').height()-$('#header>.welcome').height())/2-parseInt($('#header>.welcome').css("padding"))});
+      }
+      //初始化飾條位置
+      setinnermiddle();
+
+      //resize時的飾條位置重整
+      $(window).resize(function() {
+        setinnermiddle();
+      });
+
+      //滾動事件
+      $(window).scroll(function() {
+        var headerHeight = $('#header').height() - navHeight;
+        var scrollTopHeight = $(window).scrollTop();
+        
+        if(scrollTopHeight > headerHeight) {
+            $('#nav').addClass('navbar-fixed-top');
+            $('#wrapper').css({"margin-top":navHeight * 1.5});
+        } else {
+            $('#nav').removeClass('navbar-fixed-top');
+            $('#wrapper').css({"margin-top":"0px"});
+        }
+      });
+      //body附加滾動監視
+      $('body').scrollspy({target:'#nav',offset: navHeight});
+      //點擊錨點的平滑滾動
+      $('.presentation>a').click(function(){
+        $('html,body').animate({scrollTop:($($(this).attr("href")).offset().top - navHeight)});
+        return false;
+      });
     });
     </script>
     <title>SOSCET First</title>

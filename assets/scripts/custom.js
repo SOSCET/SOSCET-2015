@@ -15,7 +15,7 @@ $(document).ready(function(){
         
     if(scrollTopHeight > headerHeight) {
       $('#nav').addClass('navbar-fixed-top');
-      $('#wrapper').css({marginTop: navHeight * 1.5});
+      $('#wrapper').css({marginTop: navHeight});
     } else {
       $('#nav').removeClass('navbar-fixed-top');
       $('#wrapper').css({marginTop: "0px"});
@@ -25,9 +25,14 @@ $(document).ready(function(){
   //body附加滾動監視
   $('body').scrollspy({target: '#nav', offset: navHeight});
 
+  //增加點擊事件
+  $('#scrolldown > p').click(function(){
+    $('.presentation > a').first().trigger('click');
+  })
+
   //點擊錨點的平滑滾動
   $('.presentation > a').click(function(){
-    $('html').animate({scrollTop: ($($(this).attr("href")).offset().top - navHeight)});
+    $('body').animate({scrollTop: ($($(this).attr("href")).offset().top - navHeight)});
     return false;
   });
 

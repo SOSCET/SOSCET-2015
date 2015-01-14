@@ -20,10 +20,17 @@
         .nav-pills>li>a {
             border-radius: 0;
         }
-        .nav-pills>li.active>a, 
-        .nav-pills>li.active>a:hover, 
-        .nav-pills>li.active>a:focus {
-            //background: rgba(10, 200, 100, 0.5);
+        .nav-pills {
+            background: #222;
+        }
+        .nav-pills a {
+            color: #FFF;
+        }
+        .nav > li > a:hover, .nav > li > a:focus {
+            background: #444;
+        }
+        .nav > li > a {
+            padding: 20px 15px;
         }
         .welcome {
             position: absolute;
@@ -99,6 +106,7 @@
 
       //body附加滾動監視
       $('body').scrollspy({target: '#nav', offset: navHeight});
+
       //點擊錨點的平滑滾動
       $('.presentation>a').click(function(){
         $('html, body').animate({scrollTop: ($($(this).attr("href")).offset().top - navHeight)});

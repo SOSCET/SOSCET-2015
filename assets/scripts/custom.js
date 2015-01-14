@@ -12,7 +12,6 @@ $(document).ready(function(){
   $(window).scroll(function() {
     var headerHeight = $('#header').height();
     var scrollTopHeight = $(window).scrollTop();
-        
     if(scrollTopHeight > headerHeight) {
       $('#nav').addClass('navbar-fixed-top');
       $('#wrapper').css({marginTop: navHeight});
@@ -23,7 +22,7 @@ $(document).ready(function(){
   });
 
   //body附加滾動監視
-  $('body').scrollspy({target: '#nav', offset: navHeight});
+  $('html,body').scrollspy({target: '#nav', offset: navHeight});
 
   //增加點擊事件
   $('#scrolldown > p').click(function(){

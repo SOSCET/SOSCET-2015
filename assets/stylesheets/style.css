@@ -1,0 +1,70 @@
+body {
+    font-family: "Microsoft JhengHei", "WenQuanYi Micro Hei", "Microsoft YaHei", "LiHei Pro";
+}
+#header {
+    position: relative;
+    background: url('../images/background.jpg') no-repeat fixed center center / 110% 110%;
+    height: 100vh;
+    width: 100%;
+}
+.nav-pills>li>a {
+    border-radius: 0;
+}
+.nav-pills {
+    background: #222;
+}
+.nav-pills a {
+    color: #FFF;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    background: #444;
+}
+.nav > li > a {
+    padding: 20px 15px;
+}
+.welcome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(40% - 8em);
+    padding: 3em;
+    background: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    text-align: center;
+    height: 17em;
+}
+#header .bgcopy {
+    position: absolute;
+    right: 2em;
+    bottom: 1em;
+    color: #666;
+}
+#header .bgcopy a {
+    color: #666;
+}
+#header .scrolldown {
+    position: absolute;
+    width: 100%;
+    bottom: 1.5em;
+    color: rgba(255, 255, 255, .6);
+    font-size: 1.7em;
+    text-align: center;
+    transition: all 0.3s ease 0.2s;
+}
+#header .scrolldown:hover {
+    color: #FFF;
+    font-size: 1.75em;
+}
+.inner {
+    line-height: 2em;
+}
+#nav {
+    background: rgba(240, 240, 240, 1);
+}
+#wrapper .row {
+    min-height: 16em;
+    padding: 8em 0;
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+}
+

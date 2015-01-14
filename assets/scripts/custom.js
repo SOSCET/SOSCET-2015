@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   //滾動事件
   $(window).scroll(function() {
-    var headerHeight = $('#header').height() - navHeight;
+    var headerHeight = $('#header').height();
     var scrollTopHeight = $(window).scrollTop();
         
     if(scrollTopHeight > headerHeight) {

@@ -66,6 +66,13 @@
         #nav {
             background: rgba(240, 240, 240, 1);
         }
+
+        #wrapper .row {
+            min-height: 16em;
+            padding: 8em 0;
+            text-align: center;
+            border-bottom: 1px solid #EEE;
+        }
     </style>
     <script type="text/javascript">
     //取得瀏覽器視窗高度
@@ -117,7 +124,7 @@
                <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></p>
         </div>
     </header>
-    <div id="nav">
+    <nav id="nav">
         <ul class="nav nav-pills nav-justified">
             <li class="presentation">
                 <a href="#about">About</a>
@@ -132,49 +139,34 @@
                 <a href="#contactus">ContactUs</a>
             </li>
         </ul>
-    </div>
-    <div class="container" id="wrapper" data-spy="scroll" data-offset="0" data-target="#nav">
+    </nav>
+    <section class="container" id="wrapper" data-spy="scroll" data-offset="0" data-target="#nav">
         <div class="row" id="about">
             <div class="col-md-12">
-                <h1>關於我們</h1>
-                <div>
-                    <p>
-                    關於我們...我想說的是
-                    </p>
-                </div>
+                <p class="h2">我們希望，藉由 SOSCET 這樣的活動，</p>
+                <p class="h2">宣揚自由、開放的開放原始碼精神、</p>
+                <p class="h2">幫助想學習資訊技術的學生增長知識、互相交流。</p>
             </div>
         </div>
         <div class="row" id="location">
             <div class="col-md-12">
-                <h1>地圖</h1>
-                <div>
-                    <p>
-                    聽說是地圖
-                    </p>
-                </div>
+                <p>聽說是地圖</p>
             </div>
         </div>
         <div class="row" id="schedule">
             <div class="col-md-12">
                 <h1>議程</h1>
-                <div>
-                    <p>
-                    這裡是議程
-                    </p>
-                </div>
+                <p>這裡是議程</p>
             </div>
         </div>
         <div class="row" id="contactus">
             <div class="col-md-12">
                 <h1>聯絡我們</h1>
-                <div>
-                    <p>
-                    要聯絡我們嗎&lt;_&lt;
-                    </p>
+                <p>要聯絡我們嗎&lt;_&lt;</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
 

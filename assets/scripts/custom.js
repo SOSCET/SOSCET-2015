@@ -26,12 +26,12 @@ $(document).ready(function(){
 
   //增加點擊事件
   $('#scrolldown > p').click(function(){
-    $('.presentation > a').first().trigger('click');
+    $('.presentation:first-child a')[0].click();
   })
 
   //點擊錨點的平滑滾動
   $('.presentation > a').click(function(){
-    $('body').animate({scrollTop: ($($(this).attr("href")).offset().top - (navHeight - 1))});
+    $('html, body').animate({scrollTop: ($($(this).attr("href")).offset().top - (navHeight - 1))});
     return false;
   });
 

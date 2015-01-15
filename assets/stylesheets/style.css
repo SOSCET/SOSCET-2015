@@ -13,12 +13,12 @@ body {
 .nav-pills a {
     color: #FFF;
 }
-/*.nav-pills {
+/* .nav-pills {
     background: #222;
-}
-.nav > li > a:hover, .nav > li > a:focus {
+} */
+.navbar-inverse > li > a:hover, .navbar-inverse > li > a:focus {
     background: #444;
-}*/
+}
 .nav > li > a {
     padding: 20px 15px;
 }

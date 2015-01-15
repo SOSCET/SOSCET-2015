@@ -31,7 +31,7 @@ $(document).ready(function(){
 
   //點擊錨點的平滑滾動
   $('.presentation > a').click(function(){
-    $('body').animate({scrollTop: ($($(this).attr("href")).offset().top - navHeight)});
+    $('body').animate({scrollTop: ($($(this).attr("href")).offset().top - (navHeight - 1))});
     return false;
   });
 

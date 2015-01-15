@@ -10,15 +10,15 @@ body {
 .nav-pills>li>a {
     border-radius: 0;
 }
-.nav-pills {
-    background: #222;
-}
 .nav-pills a {
     color: #FFF;
 }
+/*.nav-pills {
+    background: #222;
+}
 .nav > li > a:hover, .nav > li > a:focus {
     background: #444;
-}
+}*/
 .nav > li > a {
     padding: 20px 15px;
 }

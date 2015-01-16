@@ -5,8 +5,6 @@ function getBrowserHeight() {
 
 $(document).ready(function(){
   var navHeight = $('#nav').height();
-  var sx = $('#header').width();
-  var sy = $('#header').height();
 
   //滾動事件
   $(window).scroll(function() {
@@ -33,16 +31,6 @@ $(document).ready(function(){
   $('.presentation > a').click(function(){
     $('html, body').animate({scrollTop: ($($(this).attr("href")).offset().top - (navHeight - 1))});
     return false;
-  });
-
-  $(document).mousemove(function(e) {
-    var cx = e.clientX; var cy = e.clientY;
-    var offset = 10;
-
-    var ox = (cx / sx);
-    var oy = (cy / sy);
-
-    $('#header').css({ backgroundPosition: (ox * offset) + '%' + ' ' + (oy * offset) + '%' });
   });
 });
 

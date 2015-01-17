@@ -1,11 +1,10 @@
 //取得瀏覽器視窗高度
 function getBrowserHeight() {
-      return window.innerHeight;
+  return window.innerHeight;
 }
 
 $(document).ready(function(){
   var navHeight = $('#nav').height();
-
   //滾動事件
   $(window).scroll(function() {
     var headerHeight = $('#header').height();
@@ -21,7 +20,8 @@ $(document).ready(function(){
 
   //body附加滾動監視
   $('html,body').scrollspy({target: '#nav', offset: navHeight});
-
+  $('.fixbug').remove();
+  $('html,body').scrollspy('refresh');
   //增加點擊事件
   $('#scrolldown > p').click(function(){
     $('.presentation:first-child a')[0].click();

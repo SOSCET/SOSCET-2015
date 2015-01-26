@@ -106,3 +106,8 @@ tr:nth-child(1) {
     color: white;
     background-color: #444;
 }
+footer {
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+}

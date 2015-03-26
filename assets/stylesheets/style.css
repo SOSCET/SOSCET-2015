@@ -106,7 +106,7 @@ header {
     text-align: left;
     text-indent: 2em;
 }
-#idea>ol {
+#idea > ol {
     margin-left: 1em;
     font-size: 1em;
 }
@@ -116,16 +116,16 @@ header {
     width: 100%;
     table-layout: fixed;
 }
-.layoutTable > tbody > tr > td {
+.layoutTable td {
     padding: 0.5rem 1rem;
     font-size: 1.15rem;
     text-align: center;
     text-indent: 0em;
 }
-tr:nth-child(odd) {
+tbody tr:nth-child(odd) {
     background-color:#f5f5f5;
 }
-tr:nth-child(1) {
+thead tr {
     color: white;
     background-color: #444;
 }

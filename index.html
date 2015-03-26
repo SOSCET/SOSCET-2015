@@ -1,110 +1,225 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title></title>
     <meta charset="utf-8">
-    <title>SOSCET First</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/stylesheets/style.css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <meta description="台灣東部開源社群 SOSCET ">
+    <meta keywords="opensource,學生,開源,東部,資訊,IT,Computer,年會,東部開源學生社群,SOSCET">
+    <style type="text/css">
+    *::selection {
+        background-color: rgba(180, 200,240, 0.5);
+    }
+    body,html {
+        padding: 0px;
+        margin: 0px;
+        min-height: 16em;
+        font-family: "Microsoft Jhenghei";
+    }
+    a {
+        color: #8B9DD5;
+        text-decoration: none;
+    }
+    a:hover {
+        color: orange;
+    }
+    header {
+        background: rgb(69,72,77);
+        background-color: #fff;
+        height: 50vh;
+        margin: 0px;
+        padding: 0px;
+    }
+    .header {
+        color: #fff;
+        text-shadow: #000 0 0 0.7rem;
+        text-align: center;
+        display: block;
+        width: 100%;
+        padding:0px;
+        margin: 0px;
+        position: relative;
+        transition: all 0.3s ease 0.2s;
+    }
+    .mainHead {
+        margin: 35vh 0px 0px 0px;
+        font-size: 5em;
+        padding: 0px;
+    }
+    .mainHead:hover {
+        text-shadow: #000 0 0 0.4rem;
+    }
+    .subHead {
+        text-shadow: #000 0 0 0.5rem;
+        padding: 0.3em 0px;
+        font-size: 2em;
+    }
+    .subHead:hover {
+        text-shadow: #000 0 0 0.3rem;
+    }
+    .nav {
+        width: 100%;
+        
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+        box-shadow: #999 0 2px 7px;
+        transition: all 0.3s ease 0.2s;
+    }
+    .nav:hover {
+        box-shadow: #666 0 2px 12px;
+    }
+    .navitem {
+        display: inline-block;
+        height: 4rem;
+        width: 8em;
+        line-height: 4rem;
+        color: #eee;
+        text-shadow: #000 0 0 0.3rem;
+        font-size: 1.3rem;
+        background-color: transparent;
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        transition: all 0.3s ease 0.2s;
+    }
+    .navitem:hover {
+        color: #333;
+        text-shadow: #000 0 0 0px;
+    }
+    .linerborder {
+        border-width: 0px;
+        border-bottom: solid 1px;
+        border-image: linear-gradient(to right, rgba(102,102,102,0) 0%,rgba(102,102,102,0.4) 35%,rgba(102,102,102,1) 50%,rgba(102,102,102,0.4) 65%,rgba(102,102,102,0) 100%) 1 stretch; /* W3C */
+    }
+    .container {
+        width: 60%;
+        margin: auto;
+    }
+    .wrapper {
+        font-size: 120%;
+        margin-top: 8em;
+        min-height: 500px;
+    }
+    .conthead {
+        text-indent: 0em;
+        font-size: 2em;
+    }
+    #about,
+    #property,
+    #idea,
+    #gathering {
+        color: #333;
+        text-align: left;
+        text-indent: 2em;
+    }
+    #idea>ol {
+        margin-left: 1em;
+        font-size: 1em;
+    }
+    /* Table */
+    .layoutTable {
+        margin: 0 auto;
+        width: 100%;
+        table-layout: fixed;
+    }
+    .layoutTable > tbody > tr > td {
+        padding: 0.5rem 1rem;
+        font-size: 1.15rem;
+        text-align: center;
+        text-indent: 0em;
+    }
+    tr:nth-child(odd) {
+        background-color:#f5f5f5;
+    }
+    tr:nth-child(1) {
+        color: white;
+        background-color: #444;
+    }
+    footer {
+        text-align: center;
+    }
+	.joinus {
+	    text-align: center;
+	}
+	.joinus a {
+		font-size: 120%;
+		color: #FF3939;
+		margin-bottom: 40px;
+		padding: 20px 40px;
+		box-shadow: 0px 0px 10px #333;
+		display: inline-block;
+        transition: all 0.3s ease 0.2s;
+	}
+	.joinus a:hover {
+	    box-shadow: 0px 0px 20px #444;
+	}
 
-      ga('create', 'UA-58966007-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    /* RWD */
+    @media screen and (max-width: 640px) {
+        .container {
+            width: 100%;
+        }
+    }
+    </style>
 </head>
 <body>
-    <header id="header">
-        <div class="welcome">
-            <div class="inner">
-                <h1 class="normalMouse">SOSCET</h1>
-                <h3 class="normalMouse">東部開源人學生社群</h3>
-                <small class="normalMouse">Students' Open Source Community of Eastern Taiwan</small>
-            </div>
-        </div>
-        <div class="scrolldown" id="scrolldown">
-            <p>往下滑，看更多！</p>
-        </div>
-        <div class="bgcopy">
-            <p class="normalMouse">Background by <a href="https://www.flickr.com/photos/tomasfano/">Tom&aacute;s Fano</a>,
-               <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a></p>
-        </div>
+    <header>
+        <h1 class="header mainHead linerborder">SOSCET</h1>
+        <h3 class="header subHead">東部開源人學生社群</h3>
     </header>
-    <nav id="nav">
-        <ul class="nav nav-pills nav-justified navbar-inverse hidden-xs">
-            <li class="presentation">
-                <a href="#about">About</a>
-            </li>
-            <li class="presentation">
-                <a href="#location">Location</a>
-            </li>
-            <li class="presentation">
-                <a href="#schedule">Schedule</a>
-            </li>
-            <li class="presentation">
-                <a href="#contactus">ContactUs</a>
-            </li>
-            <li style="display:none;" class="fixbug">
-                <a href="#fixbug" style="display:none;"></a>
-            </li>
-        </ul>
-    </nav>
-    <section id="wrapper">
-        <div class="row linerborder" id="about">
-            <div class="col-md-12">
-                <p class="h2">我們希望，藉由 SOSCET 這樣的活動，</p>
-                <p class="h2">宣揚自由、開放的開放原始碼精神、</p>
-                <p class="h2">幫助想學習資訊技術的學生增長知識、互相交流。</p>
-                <a href="https://www.facebook.com/soscet" class="btn btn-lg btn-primary">Facebook 粉絲專頁</a>
-            </div>
-        </div>
-        <div class="row linerborder" id="location">
-            <div class="col-md-12">
-                <h1>地點</h1>
-                <h3>花蓮高工-資訊科一年級教室(進校門後向右轉直走到底，最後一棟)</h3>
-                <div id="map-canvas"></div>
-            </div>
-        </div>
-        <div class="row linerborder" id="schedule">
-            <div class="col-md-12">
-                <h1>議程</h1>
-                <small>（暫定，敬請關注 Facebook 粉絲專頁）</small>
-                <p class="h3">2015/02/08 （日）</p>
-                <table class="layoutTable">
+    <div class="nav">
+        <a href="#about" class="navitem">關於SOSCET</a>
+        <a href="#idea" class="navitem">理念</a>
+        <a href="#property" class="navitem">性質</a>
+        <a href="#gathering" class="navitem">聚會</a>
+    </div>
+    <article class="wrapper">
+        <section id="about" class="container">
+            <h1 class="conthead">關於SOSCET</h1>
+            <p>
+                SOSCET 是由花蓮在地學生發起的學生開源社群，我們強調讓同學們在實作中學習各類資訊相關的技術，並藉由社群活動、讓學生們能夠彼此互相學習，助人助己。<br>
+                <del>SOSCET，就決定是你了！</del>
+            </p>
+        </section>
+        <section id="idea" class="container">
+            <h1 class="conthead">理念</h1>
+            <p>
+                <ol class="conthead">
+                    <li>我們主張、追求並提倡自由、開放。</li>
+                    <li>Open Source 同時也是一種生活態度</li>
+                    <li>It's better when it's shared</li>
+                </ol>
+
+            </p>
+        </section>
+        <section id="property" class="container">
+            <h1 class="conthead">性質</h1>
+            <p>
+                SOSCET是開放性的社群，強調的是「學習」，分享及傳承知識，而SOSCET中的工作都採由「填坑式」工作法，想要幫忙的人就自己填坑，有什麼點子就自己挖坑找人填，SOSCET的目的是讓學生們了解「資訊」及「開源」和「學習」是什麼，並且帶動東部的資訊教育。               
+            </p>
+			<del>歡迎一起來跳（挖）坑</del>
+        </section>
+        <section id="gathering" class="container">
+            <h1 class="conthead">聚會</h1>
+                <table border="0" cellspacing="0" cellpadding="0" class="layoutTable">
                     <tbody>
-                        <tr><td width="90">時間</td><td width="380">主題</td><td width="150">講者</td><td>簡介</td></tr>
-                        <tr><td>13:30</td><td>開幕</td><td>FateYan</td><td></td></tr>
-                        <tr><td>14:10</td><td>我所知道的網路與被遺忘的隱私權</td><td>BinotaLiu</td><td>許多人天天滑手機，網路似乎已成爲現代人生活中不可或缺的一部分，但是隱私權確是被大多數人忽略的一部分……</td></tr>
-                        <tr><td>14:30</td><td>從開源軟體軟體談到程式設計入門</td><td>BinotaLiu</td><td>從開源軟體談到程式設計入門</td></tr>
-                        <tr><td>15:10</td><td>Web製作 辛  酸  血  淚  史</td><td>FateYan</td><td>一年前，什麼都不會的我，<br>在人生道路上掉進了一個名為「Web」的坑。<br>—— Y 語錄 : 「人生總是充滿了坑洞」</td></tr>
-                        <tr><td>15:30</td><td>Programming 正在改變世界，你察覺了嗎？</td><td>FateYan</td><td>如果你閉上眼睛去想十年後的世界是什麼樣子，你就會知道那將會是完全不同的世界...</td></tr>
-                        <tr><td>15:50</td><td>真‧桌機硬體無雙</td><td>Doufu</td><td> 硬體扮演著什麼樣的角色? 電腦不能開了怎麼辦? 如何詳述遇到的問題? 三十分鐘教你鎖定問題癥結點，快速尋求解決方案。</td></tr>
-                        <tr><td>16:30</td><td>Arduino</td><td>YaoMingKuo</td><td>超好玩的機器人簡介</td></tr>
-                        <tr><td>~</td><td>交流時間</td></td></td><td></td></tr>
+                        <tr><td width="10%">日期</td><td width="15%">類型</td><td width="30%">主題</td><td>備註</td></tr>
+                        <tr><td>4/11</td><td>定期聚</td><td>Sitcon x SOSCET</td><td><a href="http://sitcon.kktix.cc/events/hualien-soscet-01">活動網頁</a><br/>詳情請參見網頁</td></tr>
+                        <tr>　<td></td><td>　</td><td>　</td><td></td>　</tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="row linerborder" id="contactus">
-            <div class="col-md-12">
-                <h1>聯絡我們</h1>
-                <p>&#115;&#111;&#115;&#099;&#101;&#116;&#064;&#115;&#116;&#117;&#100;&#105;&#111;&#045;&#109;&#111;&#117;&#103;&#101;&#046;&#111;&#114;&#103;</p>
-                </div>
-            </div>
-        </div>
-        <div id="fixbug" class="fixbug">
-        </div>
-    </section>
+        </section>
+    </article>
+	<div class="joinus">
+       <a href="http://yan.studio-mouge.org/" target="_blank">加入Slack</a>
+	</div>
     <footer>
-        2012-2014 &copy; <a href="https://facebook.com/soscet">SOSCET</a>, All Rights Reserved.
-    </footer>
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="assets/scripts/custom.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		2012-2014 &copy; <a href="https://soscet.github.io/">SOSCET</a>, All Rights Reserved.<br>
+		<a href="https://www.facebook.com/soscet">Our facebook page</a>
+	
+	</footer>
+
 </body>
 </html>
-

@@ -6,176 +6,21 @@
 
     <meta content="台灣東部開源社群 SOSCET" name="description">
     <meta content="opensource,學生,開源,東部,資訊,IT,Computer,年會,東部開源學生社群,SOSCET" name="keywords">
-    <style type="text/css">
-    *::selection {
-        background-color: rgba(180, 200,240, 0.5);
-    }
-    body,html {
-        padding: 0px;
-        margin: 0px;
-        min-height: 16em;
-        font-family: "Microsoft Jhenghei";
-    }
-    a {
-        color: #8B9DD5;
-        text-decoration: none;
-    }
-    a:hover {
-        color: orange;
-    }
-    header {
-        background: rgb(69,72,77);
-        background-color: #fff;
-        height: 50vh;
-        margin: 0px;
-        padding: 0px;
-    }
-    .header {
-        color: #fff;
-        text-shadow: #000 0 0 0.7rem;
-        text-align: center;
-        display: block;
-        width: 100%;
-        padding:0px;
-        margin: 0px;
-        position: relative;
-        transition: all 0.3s ease 0.2s;
-    }
-    .mainHead {
-        margin: 35vh 0px 0px 0px;
-        font-size: 5em;
-        padding: 0px;
-    }
-    .mainHead:hover {
-        text-shadow: #000 0 0 0.4rem;
-    }
-    .subHead {
-        text-shadow: #000 0 0 0.5rem;
-        padding: 0.3em 0px;
-        font-size: 2em;
-    }
-    .subHead:hover {
-        text-shadow: #000 0 0 0.3rem;
-    }
-    .nav {
-        width: 100%;
-        
-        text-align: center;
-        padding: 0px;
-        margin: 0px;
-        margin-bottom: 5px;
-        background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
-        box-shadow: #999 0 2px 7px;
-        transition: all 0.3s ease 0.2s;
-    }
-    .nav:hover {
-        box-shadow: #666 0 2px 12px;
-    }
-    .navitem {
-        display: inline-block;
-        height: 4rem;
-        width: 8em;
-        line-height: 4rem;
-        color: #eee;
-        text-shadow: #000 0 0 0.3rem;
-        font-size: 1.3rem;
-        background-color: transparent;
-        padding: 0px;
-        margin: 0px;
-        text-decoration: none;
-        transition: all 0.3s ease 0.2s;
-    }
-    .navitem:hover {
-        color: #333;
-        text-shadow: #000 0 0 0px;
-    }
-    .linerborder {
-        border-width: 0px;
-        border-bottom: solid 1px;
-        border-image: linear-gradient(to right, rgba(102,102,102,0) 0%,rgba(102,102,102,0.4) 35%,rgba(102,102,102,1) 50%,rgba(102,102,102,0.4) 65%,rgba(102,102,102,0) 100%) 1 stretch; /* W3C */
-    }
-    .container {
-        width: 60%;
-        margin: auto;
-    }
-    .wrapper {
-        font-size: 120%;
-        margin-top: 8em;
-        min-height: 500px;
-    }
-    .conthead {
-        text-indent: 0em;
-        font-size: 2em;
-    }
-    #about,
-    #property,
-    #idea,
-    #gathering {
-        color: #333;
-        text-align: left;
-        text-indent: 2em;
-    }
-    #idea>ol {
-        margin-left: 1em;
-        font-size: 1em;
-    }
-    /* Table */
-    .layoutTable {
-        margin: 0 auto;
-        width: 100%;
-        table-layout: fixed;
-    }
-    .layoutTable > tbody > tr > td {
-        padding: 0.5rem 1rem;
-        font-size: 1.15rem;
-        text-align: center;
-        text-indent: 0em;
-    }
-    tr:nth-child(odd) {
-        background-color:#f5f5f5;
-    }
-    tr:nth-child(1) {
-        color: white;
-        background-color: #444;
-    }
-    footer {
-        text-align: center;
-    }
-    .joinus {
-        text-align: center;
-    }
-    .joinus a {
-        font-size: 120%;
-        color: #FF3939;
-        margin-bottom: 40px;
-        padding: 20px 40px;
-        box-shadow: 0px 0px 10px #333;
-        display: inline-block;
-        transition: all 0.3s ease 0.2s;
-    }
-    .joinus a:hover {
-        box-shadow: 0px 0px 20px #444;
-    }
-
-    /* RWD */
-    @media screen and (max-width: 640px) {
-        .container {
-            width: 100%;
-        }
-    }
-    </style>
+    <link href="assets/stylesheets/style.css" media="all" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1 class="header mainHead linerborder">SOSCET</h1>
         <h3 class="header subHead">東部開源人學生社群</h3>
     </header>
+
     <div class="nav">
         <a href="#about" class="navitem">關於SOSCET</a>
         <a href="#idea" class="navitem">理念</a>
         <a href="#property" class="navitem">性質</a>
         <a href="#gathering" class="navitem">聚會</a>
     </div>
+
     <article class="wrapper">
         <section id="about" class="container">
             <h1 class="conthead">關於SOSCET</h1>
@@ -216,13 +61,15 @@
                 </table>
         </section>
     </article>
+
     <div class="joinus">
        <a href="http://yan.studio-mouge.org/" target="_blank">加入Slack</a>
     </div>
+
     <footer>
         2012-2014 &copy; <a href="https://soscet.github.io/">SOSCET</a>, All Rights Reserved.<br>
         <a href="https://www.facebook.com/soscet">Our facebook page</a>
     </footer>
-
 </body>
 </html>
+

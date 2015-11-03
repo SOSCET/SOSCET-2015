@@ -17,20 +17,20 @@
     "grunt-wiredep": "^2.0.0",
     "load-grunt-tasks": "^3.2.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SOSCET/home.git"
+    "url": "git+https://github.com/SOSCET/SOSCET.github.io.git"
   },
   "keywords": [
     "SOSCET"
   ],
-  "author": "Tsundere Chen <tsundere@kisekinoashita.org>",
+  "author": [
+    "Tsundere Chen <tsundere@kisekinoashita.org>",
+    "fateyan <fateyan.tw@gmail.com>"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SOSCET/home/issues"
+    "url": "https://github.com/SOSCET/SOSCET.github.io/issues"
   },
-  "homepage": "https://github.com/SOSCET/home#readme"
+  "homepage": "https://github.com/SOSCET/SOSCET.github.io#readme"
 }

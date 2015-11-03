@@ -35,9 +35,40 @@ header {
         text-align: center;
         color: #fff;
         text-shadow: 0px 0px 20px #333;
+        @media(max-width:767px) {
+            .cover-main {
+                font-size: 6em;
+            }
+            .cover-sub {
+                font-size: 3em;
+            }
+        }
+        @media(min-width:768px) {
+            .cover-main {
+                font-size: 9em;
+            }
+            .cover-sub {
+                font-size: 6em;
+            }
+        }
+        @media(min-width:992px) {
+            .cover-main {
+                font-size: 8em;
+            }
+            .cover-sub {
+                font-size: 4em;
+            }
+        }
+        @media(min-width:1200px) {
+            .cover-main {
+                font-size: 15em;
+            }
+            .cover-sub {
+                font-size: 9em;
+            }
+        } 
         .cover-main {
             font-weight: 700;
-            font-size: 8em;
             position: absolute;
             top: 5vh;
             width: 100%;
@@ -48,7 +79,6 @@ header {
             bottom: 5vh;
             width: 100%;
             text-align: center;
-            font-size: 4em;
             small {
                 color: #fff;
             }

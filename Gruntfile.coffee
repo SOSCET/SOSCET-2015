@@ -1,3 +1,5 @@
+exec = require('child_process').exec
+
 module.exports = (grunt) ->
   conf =
     copy:
@@ -29,4 +31,7 @@ module.exports = (grunt) ->
   grunt.initConfig conf
 
   grunt.registerTask 'default', ['recess', 'htmlmin', 'copy']
-
+  grunt.registerTask 'deploy', 'Deploy it to master branch.', ->
+    exec 'sh ./deploy.sh', (err, stdout, stderr) -> 
+      if err
+        throw new Error err

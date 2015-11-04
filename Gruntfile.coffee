@@ -45,6 +45,7 @@ module.exports = (grunt) ->
         src: 'public'
 
   grunt.loadNpmTasks 'grunt-recess'
+  grunt.loadNpmTasks 'grunt-git-deploy'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'

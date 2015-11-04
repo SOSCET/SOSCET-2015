@@ -26,7 +26,7 @@ module.exports = (grunt) ->
     watch:
       main:
         files: [
-          'src/index.html',
+          'src/**',
           'assets/**'
         ],
         tasks: [
@@ -36,6 +36,13 @@ module.exports = (grunt) ->
         ],
         options:
           livereload: true
+    git_deploy:
+      main:
+        options:
+          url: 'git@github.com:soscet/soscet.github.io',
+          branch: 'master',
+          message: 'Update'
+        src: 'public'
 
   grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
@@ -46,4 +53,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['recess', 'htmlmin', 'copy']
   grunt.registerTask 'w', ['watch']
+  grunt.registerTask 'deploy', ['git_deploy']
 

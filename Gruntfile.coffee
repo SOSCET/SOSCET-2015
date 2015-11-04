@@ -8,7 +8,11 @@ module.exports = (grunt) ->
           expand: true
           src: ['assets/**']
           dest: 'public/'
-        } ]
+        },
+        {
+          src: ['CNAME']
+          dest: 'public/'
+        }]
     recess:
       dist:
         options:

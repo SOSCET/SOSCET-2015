@@ -22,16 +22,28 @@ module.exports = (grunt) ->
           removeComments: true
           collapseWhitespace: true
         files:
-          'public/index.html':'src/index.html'
+          'public/index.html': 'src/index.html'
+    watch:
+      main:
+        files: [
+          'src/index.html',
+          'assets/**'
+        ],
+        tasks: [
+          'recess:dist',
+          'htmlmin:dist',
+          'copy:main'
+        ],
+        options:
+          livereload: true
 
   grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
 
   grunt.initConfig conf
 
   grunt.registerTask 'default', ['recess', 'htmlmin', 'copy']
-  grunt.registerTask 'deploy', 'Deploy it to master branch.', ->
-    exec 'sh ./deploy.sh', (err, stdout, stderr) -> 
-      if err
-        throw new Error err
+  grunt.registerTask 'w', ['watch']
+
